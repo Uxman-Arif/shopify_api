@@ -7,7 +7,6 @@ app = FastAPI()
 
 DB_FILE = "db.json"
 
-# ----------------- Helpers -----------------
 def load_db():
     if not os.path.exists(DB_FILE):
         with open(DB_FILE, "w") as f:
@@ -19,7 +18,7 @@ def save_db(data):
     with open(DB_FILE, "w") as f:
         json.dump(data, f, indent=2)
 
-# ----------------- Models -----------------
+# Models
 class Product(BaseModel):
     title: str
     price: str
@@ -38,11 +37,11 @@ class Order(BaseModel):
     customer_id: int
     line_items: list[LineItem]
 
-# ----------------- Endpoints -----------------
-
+# Endpoints
 @app.get("/health")
 def health():
     return {"status": "ok"}
+
 
 # Products
 @app.get("/products")
@@ -67,6 +66,7 @@ def create_product(product: Product):
     save_db(db)
     return {"success": True, "product_id": new_id}
 
+
 # Customers
 @app.get("/customers")
 def get_customers():
@@ -81,6 +81,7 @@ def create_customer(customer: Customer):
     db["customers"].append(new_customer)
     save_db(db)
     return {"success": True, "customer_id": new_id}
+
 
 # Orders
 @app.get("/orders")
