@@ -1,0 +1,134 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Running Shoes",
+      "price": "59.99",
+      "inventory": 100,
+      "status": "active"
+    },
+    {
+      "id": 2,
+      "title": "Casual T-Shirt",
+      "price": "19.99",
+      "inventory": 200,
+      "status": "active"
+    },
+    {
+      "id": 3,
+      "title": "Denim Jeans",
+      "price": "39.99",
+      "inventory": 150,
+      "status": "active"
+    },
+    {
+      "id": 4,
+      "title": "Smart Watch",
+      "price": "129.99",
+      "inventory": 50,
+      "status": "active"
+    },
+    {
+      "id": 5,
+      "title": "Baseball Cap",
+      "price": "14.99",
+      "inventory": 300,
+      "status": "active"
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john@example.com"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "email": "jane@example.com"
+    },
+    {
+      "id": 3,
+      "name": "Ali Khan",
+      "email": "ali@example.com"
+    },
+    {
+      "id": 4,
+      "name": "Maria Garcia",
+      "email": "maria@example.com"
+    },
+    {
+      "id": 5,
+      "name": "David Brown",
+      "email": "david@example.com"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "customer_id": 1,
+      "line_items": [
+        {
+          "product_id": 1,
+          "quantity": 2
+        },
+        {
+          "product_id": 2,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "customer_id": 2,
+      "line_items": [
+        {
+          "product_id": 3,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "customer_id": 3,
+      "line_items": [
+        {
+          "product_id": 4,
+          "quantity": 1
+        },
+        {
+          "product_id": 5,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "customer_id": 4,
+      "line_items": [
+        {
+          "product_id": 2,
+          "quantity": 2
+        },
+        {
+          "product_id": 5,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "customer_id": 5,
+      "line_items": [
+        {
+          "product_id": 1,
+          "quantity": 1
+        },
+        {
+          "product_id": 3,
+          "quantity": 1
+        }
+      ]
+    }
+  ]
+}
